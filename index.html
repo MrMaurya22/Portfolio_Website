@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/89ed8fbed6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="photos/logo2.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#mywork">My Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Shubham Maurya</h1>
+                <p>Aspiring Web Developer|Computer Science Engineering Student</p>
+                
+            </div>
+        </div>
+    </div>
+    <!-- --------------------- about ---------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="photos/aboutuser.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle" >About Me</h1>
+                    <p class="abcd">A third-year student studying Computer Science Engineering who is always looking to learn new things and explore the cutting edge of web and app development.
+                         Driven by a never-ending curiosity, I use HTML, CSS, and JavaScript to create visually stunning websites.  
+                         Aside from coding, I strongly believe in the benefits of group learning, social impact, and ongoing development. 
+                         Come along on this digital journey with me as I passionately create seamless, user-centric experiences while navigating the rapidly changing world of technology.</p>
+                         <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                            <p class="tab-links" onclick="opentab('Extra')">Extra-Curricular Activites</p>
+                         </div>
+                         <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Java</span><br> Proficient in Java, adept at crafting robust and scalable software solutions.</li>
+                                <li><span>C++</span><br>Expert in C++, crafting efficient and scalable software solutions. </li>
+                                <li><span>OS</span><br>Expert in Operating Systems, skilled in designing and optimizing for efficient computing environments.</li>
+                                <li><span>DBMS</span><br>Expert in DBMS, skilled at designing and optimizing efficient data structures for seamless information management.</li>
+                                <li><span>DSA</span><br>Data Structures and Algorithms expert, skilled in crafting efficient and scalable solutions.</li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>2018-2021</span><br>High School from Agrasain Boys' School(ISC Board)</li>
+                                <li><span>2021-2025</span><br>B.Tech in CSE from Amity University, Kolkata </li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="Extra">
+                            <ul>
+                                <li><span>Research</span><br>Contributor to a Blockchain-secured Cloud-assisted Human Activity Recognition (Block-HAR) Framework within a research team.</li>
+                                <li><span>Hackathons</span><br>Participant in Smart India Hackathon 2023. </li>
+                            </ul>
+                         </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------- My Work------------------>
+    <div id="mywork">
+        <div class="container">
+            <h1 class="subtitle" >My Work</h1>
+            <p class="pad"> <h2>Certificates</h2></p>
+            <div class="certifylist">
+                <div>
+                    <i class="fa-brands fa-java"></i>
+                    <h2>Java</h2>
+                    <p>Achieved from Hackerrank</p>
+                    <a href="https://www.hackerrank.com/certificates/bf60d827283a">Certificate</a>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-code"></i>
+                    <h2>Problem Solving</h2>
+                    <p>Achieved from Hackerrank</p>
+                    <a href="https://www.hackerrank.com/certificates/8e1f576df2ba">Certificate</a>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-database"></i>
+                    <h2>SQL</h2>
+                    <p>Achieved from Hackerrank</p>
+                    <a href="https://www.hackerrank.com/certificates/944cf84789ad">Certificate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------my contact-------->
+    <div id="contact">
+        <div class="container">
+            <div class="contact1">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-sharp fa-solid fa-paper-plane"></i>shubham.maurya@2137@gmail.com</p>
+                <p><i class="fa-sharp fa-solid fa-phone"></i>+91 8420705972</p>
+                 <div class="social-icons">
+                    <a href="https://instagram.com/mrmaurya_19?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="www.linkedin.com/in/shubham-maurya-38a26a229"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/MrMaurya22"><i class="fa-brands fa-square-github"></i></a>
+                </div>
+         </div>
+        </div>
+    <script>
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemeu.style.right= "0";
+        }
+        function closemenu(){
+            sidemeu.style.right ="-200px";
+        }
+    </script>
+</body>
+</html>
